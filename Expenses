@@ -1,0 +1,127 @@
+from os import system, name
+def clear():
+    # for windows
+    if name == 'nt':
+        _=system('cls')
+    
+    # for mac and linux(here, ox.name is 'posix')
+    else:
+        _=system('clear')
+
+def task1():
+    print("You are running Grade book Application")
+    system("pause")
+    clear()
+def task2():
+    print("You are running Payroll Application")
+    system("pause")
+    clear()
+def task3():
+    print("You are running Trip Expense Calculation")
+    system("pause")
+    clear()
+def GoodBye():
+    print("\nThanks for using this App!! Good Bye")
+
+def WrongEnter():
+    print("\nWrong Option - Try again!!!")
+    system("pause")
+    clear()
+
+choice=""
+while(choice!='c'):
+    print("\nMenu of Options")
+    print("===============\n")
+    print("a. Go to task1")
+    print("b. Go to task2")
+    print("c. Go to task3")
+    print("d. QUIT\n\n")
+    choice=input("Enter your choice ==> ")
+    if(choice=='a'):
+        task1()
+    elif(choice=='b'):
+        task2()
+    elif(choice=='c'):
+        task3()
+    elif(choice=='d'):
+        GoodBye()
+    else:
+        WrongEnter()
+        
+
+task1()
+def CalcTotal (q1,q2,q3,q4,q5):
+    average= (q1+q2+q3+q4+q5)/5
+    return average
+
+def PrintTitle():
+    print ("GradeAvg")
+    print ("=======\n")
+
+PrintTitle()
+name=input ("Enter user name ==>")
+q1=input ("Enter q1")
+q2=input ("Enter q2")
+q3=input ("Enter q3")
+q4=input ("Enter q4")
+q5=input ("Enter q5")
+
+if (avg>90):
+    "A"
+if (avg>80):
+    "B"
+if (avg>70):
+    "C"
+if (avg>60):
+    "D"
+if (avg<60):
+    "F"
+
+print (name+ "your grade is ==> " +str(p))
+
+
+
+task2()
+def CalcExtra (hours, rate):
+    payment=(40*rate)+((hours-40)*(rate*1.5))
+    return payment
+
+def CalcNormal (hours, rate):
+    return (hours*rate)
+
+def PrintTitle():
+    print("Payroll App")
+    print ("==========\n")
+
+PrintTitle()
+name=input("Enter Employee name ==>")
+h=int (input("Enter worked hours ==> "))
+r=float (input ("Enter Pay Rate ==> "))
+if(h>40):
+         p=CalcExtra(h, r)
+else:
+    p=CalcNormal(h, r)
+
+print(name+" your payment is ==>ArithmeticError " +str(p))
+
+
+task3()
+def CalcTrip (miles,cost,average,fees,tolls):
+    expenses= ((miles*cost/average)+(fees+tolls))
+    return expenses
+
+def PrintTitle():
+    print ("Trip Expenses")
+    print ("=============\n")
+
+PrintTitle()
+name =input ("Enter User name ==> ")
+miles =input ("Enter total miles driven ==> ")
+cost =input ("Enter the cost per gallon of gasoline ===> ")
+average =input ("Enter the average miles per gallon ==> ")
+fees =input ("Enter the total parking fees ==> ")
+tolls =input ("Enter the total tolls for the trip ==> ")
+
+
+print (name + "your total trip expense is ==> ")
+
